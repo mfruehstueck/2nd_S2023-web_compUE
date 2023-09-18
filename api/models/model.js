@@ -9,9 +9,14 @@
    Then, adapt the initialization of the data at the end of this file (Task 2 - Part 2)
    so that you have some instances of your object available that can be served to the client.
  */
-class Resource {
-    constructor(name) {
-        this.name = name;
+class Book {
+    constructor(isbn, title, genre, numberOfPages, isBorrowed, releaseDate) {
+        this.isbn = isbn;
+        this.title = title;
+        this.genre = genre;
+        this.numberOfPages = numberOfPages;
+        this.isBorrowed = isBorrowed;
+        this.releaseDate = releaseDate;
     }
 }
 
@@ -71,8 +76,8 @@ const model = new Model();
 
 /* Task 1 - Part 2. Replace these three instances of the example Class Resource with instances
    of your own class */
-model.add(new Resource("One"));
-model.add(new Resource("Two"));
-model.add(new Resource("Three"));
+model.add(new Book("978-0-7475-3269-9", "Harry Potter and the Philosopher's Stone", "Fantasy", 223, true, "26 June 1997"));
+model.add(new Book("0-7475-3849-2", "Harry Potter and the Chamber of Secrets", "Fantasy", 251, false, "2 July 1998"));
+model.add(new Book("0-7475-4215-5", "Harry Potter and the Prisoner of Azkaban", "Fantasy", 317, true, "8 July 1999"));
 
 module.exports = model;

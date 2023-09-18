@@ -24,6 +24,8 @@ class Controller {
          */
         const resource = req.body;
         try {
+            console.log("CREATE");
+            console.log(resource);
             res.send(model.create(resource));
         } catch (e) {
             res.status(404).send(`Error occured creating new resource: ${e}`);
@@ -38,6 +40,8 @@ class Controller {
             res.status(404).send(`No resource with id ${id} exists. Update not possible.`);
         } else {
             const resource = req.body;
+            console.log("UPDATE: " + id);
+            console.log(resource);
             model.update(id, resource);
             res.sendStatus(200);
         }
@@ -47,12 +51,13 @@ class Controller {
         /* Deletes the given resource from the model.Checks the incoming id first
          * After deleting the resource, sends back status 204. */
         const id = +req.params.id;
+        console.log(id);
 
         if (!model.get(id)) {
             res.status(404).send(`No resource with id ${id} exists. Delete not possible.`);
         } else {
             model.delete(id);
-            res.sendStatus(204);
+            res.status(204).send();
         }
     }
 }
