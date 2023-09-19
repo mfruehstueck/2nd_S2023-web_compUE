@@ -50,7 +50,7 @@ class Model {
 
     create(resource) {
         this.add(resource);
-        return resource;    
+        return resource;
     }
 
     update(id, resource) {
@@ -76,8 +76,8 @@ const model = new Model();
 
 /* Task 1 - Part 2. Replace these three instances of the example Class Resource with instances
    of your own class */
-model.add(new Book("978-0-7475-3269-9", "Harry Potter and the Philosopher's Stone", "Fantasy", 223, true, "26 June 1997"));
-model.add(new Book("0-7475-3849-2", "Harry Potter and the Chamber of Secrets", "Fantasy", 251, false, "2 July 1998"));
-model.add(new Book("0-7475-4215-5", "Harry Potter and the Prisoner of Azkaban", "Fantasy", 317, true, "8 July 1999"));
+model.add(new Book("978-0-7475-3269-9", "Harry Potter and the Philosopher's Stone", "Fantasy", 223, true, "1997-06-26"));//"26 June 1997"
+model.add(new Book("0-7475-3849-2", "Harry Potter and the Chamber of Secrets", "Fantasy", 251, false, "1998-07-02"));//"2 July 1998"
+model.add(new Book("0-7475-4215-5", "Harry Potter and the Prisoner of Azkaban", "Fantasy", 317, true, "1999-07-08"));//"8 July 1999"
 
 module.exports = model;

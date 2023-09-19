@@ -73,66 +73,49 @@ article, form {
     margin: 2px;
     background-color: #0c4f70;
     border-radius: 6px;
+    justify-content: left;
 }
 
-article {
-    /*display: grid;*/
-    /*grid-template-columns: repeat(2, 1fr);*/
-    /*grid-template-rows: repeat(8, 1fr);*/
-    /*grid-column-gap: 0px;*/
-    /*grid-row-gap: 0px;*/
+._edit {
+    background-color: yellow;
+    border-color: beige;
+}
 
-    /*display: grid;*/
-    /*!*grid-template-rows: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;*!*/
-    /*!*grid-template-columns: 32vh 32vh auto;*!*/
-    /*grid-template-areas:*/
-    /*"h h"*/
-    /*"l v"*/
-    /*"l v"*/
-    /*"l v"*/
-    /*"l v"*/
-    /*"l v"*/
-    /*"l v"*/
-    /*"f f";*/
+._delete {
+    background-color: lightcoral;
+    border-color: orangered;
+}
 
-    /*
-    h: header
-    l: lable
-    v: value
-    f: footer
-    */
+._safe {
+    background-color: mediumseagreen;
+    border-color: green;
 }
 
 article > button, form > button {
-    margin: 0px 2px;
+    margin: 4px 2px 2px 2px;
+    width: 12%;
+    font-weight: bold;
 }
-
-/*._header {*/
-/*    grid-area: h;*/
-/*}*/
-
-/*._lable {*/
-/*    !*width: 16vh;*!*/
-/*    grid-area: l;*/
-/*}*/
-
-/*._value {*/
-/*    !*width: 32vh;*!*/
-/*    grid-area: v;*/
-/*}*/
-
-/*._footer {*/
-/*    !*grid-area: f;*!*/
-/*}*/
-
-/*article > label, form > label {*/
-/*    display: inline-block;*/
-/*    width: 256px;*/
-/*}*/
 
 article > input, form > input {
     display: block;
-    width: 512px;
+}
+
+._lable {
+    display: inline-block;
+    min-width: auto;
+    width: 8%;
+}
+
+._input {
+    min-width: auto;
+    width: 16%;
+}
+
+input[type="checkbox"] {
+    accent-color: yellow;
+    width: 20px;
+    height: 20px;
 }
 
 form > label {
